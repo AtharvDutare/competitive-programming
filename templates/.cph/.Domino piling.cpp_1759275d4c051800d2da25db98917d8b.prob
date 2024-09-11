@@ -1,0 +1,1 @@
+{"name":"Local: Domino piling","url":"c:\\Users\\HP\\Desktop\\cp\\templates\\Domino piling.cpp","tests":[{"id":1721412388162,"input":"2 4\n","output":"4"},{"id":1721412672499,"input":"3 3\n","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\Desktop\\cp\\templates\\Domino piling.cpp","group":"local","local":true}

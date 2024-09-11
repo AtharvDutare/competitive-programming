@@ -1,0 +1,1 @@
+{"name":"Local: Floor Number","url":"c:\\Users\\HP\\Desktop\\cp\\striver sheet\\maths\\Floor Number.cpp","tests":[{"id":1721356659928,"input":"4\n7 3\n1 5\n22 5\n987 13","output":"3\n1\n5\n77"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\Desktop\\cp\\striver sheet\\maths\\Floor Number.cpp","group":"local","local":true}

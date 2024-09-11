@@ -1,0 +1,1 @@
+{"name":"Local: String LCM","url":"c:\\Users\\HP\\Desktop\\cp\\striver sheet\\maths\\String LCM.cpp","tests":[{"id":1721497797621,"input":"3\nbaba\nba\naa\naaa\naba\nab","output":"baba\naaaaaa\n-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\Desktop\\cp\\striver sheet\\maths\\String LCM.cpp","group":"local","local":true}

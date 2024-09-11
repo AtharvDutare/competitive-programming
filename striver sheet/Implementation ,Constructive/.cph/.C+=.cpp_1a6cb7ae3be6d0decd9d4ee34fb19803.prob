@@ -1,0 +1,1 @@
+{"name":"Local: C+=","url":"c:\\Users\\HP\\Desktop\\cp\\striver sheet\\Implementation ,Constructive\\C+=.cpp","tests":[{"id":1721586645876,"input":"2\n1 2 3\n5 4 100\n","output":"2\n7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\Desktop\\cp\\striver sheet\\Implementation ,Constructive\\C+=.cpp","group":"local","local":true}

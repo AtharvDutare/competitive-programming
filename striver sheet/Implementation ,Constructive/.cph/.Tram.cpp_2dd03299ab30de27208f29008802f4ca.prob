@@ -1,0 +1,1 @@
+{"name":"Local: Tram","url":"c:\\Users\\HP\\Desktop\\cp\\striver sheet\\Implementation ,Constructive\\Tram.cpp","tests":[{"id":1721583624078,"input":"4\n0 3\n2 5\n4 2\n4 0\n","output":"6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\Desktop\\cp\\striver sheet\\Implementation ,Constructive\\Tram.cpp","group":"local","local":true}

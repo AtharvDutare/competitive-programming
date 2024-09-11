@@ -1,0 +1,1 @@
+{"name":"Local: Heating","url":"c:\\Users\\HP\\Desktop\\cp\\striver sheet\\maths\\Heating.cpp","tests":[{"id":1721450748652,"input":"4\n1 10000\n10000 1\n2 6\n4 6","output":"100000000\n1\n18\n10\n\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\Desktop\\cp\\striver sheet\\maths\\Heating.cpp","group":"local","local":true}

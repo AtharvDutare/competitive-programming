@@ -1,0 +1,44 @@
+//arithmetic mod 
+//sum
+//(a+b)%mod=(a%mod+b%mod)%mod
+//product
+//(a*b)%mod=((a%mod)*(b%mod))%mod inner backet is imp
+//subtract
+//(a-b)%mod=(((a%mod-a%mod)%mod+mod)%mod)
+//(((a%mod-b%mod)-c%mod)%mod+mod)%mod
+//R=(R+mod)%mod to (-2+5)=3
+
+//modular inverse
+//(a/b)%mod=a*inv(b)=((a%mod)*(b^(mod-2))%mod)%mod
+
+//PREFIX SUM
+// for(int i=1;i<=m;i++){
+//     prefixSum[i]=arr[i]+prefixSum[i-1];
+// }
+//arr[l..r]=prefix[r]-prefix[l-1] one based indexing 
+
+//2D prefix sum
+// for(int i=1;i<=m;i++){
+//     for(int j=1;j<=n;j++){
+//         prefixSum[i][j]=arr[i][j]+prefixSum[i-1][j]+prefixSum[i][j-1]-prefixSum[i-1][j-1];
+//     }
+// }
+// prefix(a,b)-->(c,d) ans=p[c][d]-p[c][b-1]-p[a-1][d]+p[a-1][b-1];
+
+//~x=-(x+1)
+// x 2`s compliment is ~x+1=-x
+//~ make all bit opposite (all bit leading zeros)
+// 1111=-1=11111111111111111111111111111111(32 1`s)
+// 1110=-2
+// 1101=-3
+// 1011=-4 and goes 
+
+// 1000101<<2=100010100 a<<b=a*(2^b)
+// 101010<<4=1010100000
+//mid=(s+e)>>1
+//a>>b=a/(2^b)
+//bitmask is zero based indexing
+
+//compliment of N=~N&((1<<L)-1) L is length of bit and N is bit
+// make clear last set bit is (x)&(x-1) or i-(i&-i)
+// get bitMask of only having last set bit of x is (x&(-x)) 

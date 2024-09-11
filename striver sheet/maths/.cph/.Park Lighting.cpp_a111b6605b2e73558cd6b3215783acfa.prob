@@ -1,0 +1,1 @@
+{"name":"Local: Park Lighting","url":"c:\\Users\\HP\\Desktop\\cp\\striver sheet\\maths\\Park Lighting.cpp","tests":[{"id":1721401512574,"input":"5\n1 1\n1 3\n2 2\n3 3\n5 3","output":"1\n2\n2\n5\n8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\Desktop\\cp\\striver sheet\\maths\\Park Lighting.cpp","group":"local","local":true}

@@ -1,0 +1,26 @@
+{
+    "files.associations": {
+        "*.cpp": "cpp",
+        "iostream": "cpp",
+        "cmath": "cpp",
+        "utility": "cpp",
+        "algorithm": "cpp",
+        "list": "cpp",
+        "xstring": "cpp",
+        "initializer_list": "cpp",
+        "xutility": "cpp",
+        "memory": "cpp",
+        "atomic": "cpp",
+        "ios": "cpp",
+        "system_error": "cpp",
+        "xiosbase": "cpp",
+        "limits": "cpp",
+        "istream": "cpp",
+        "type_traits": "cpp",
+        "cstdlib": "cpp"
+    }
+    ,"code-runner.executorMap": {
+        "cpp": "cd $dir && g++ \"$fileName\" -o \"$fileNameWithoutExt.exe\" && & \"$dir$fileNameWithoutExt.exe\""
+        }   
+    
+}
