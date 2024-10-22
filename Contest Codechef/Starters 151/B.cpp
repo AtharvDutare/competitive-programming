@@ -80,32 +80,6 @@ void test_case()
 
 
 }
-int maxSubArrSum(vector<int> &arr) {
-    int n= arr.size();
-    int maxi=INT_MIN;
-    int ans=INT_MIN;
-    for(int i=0;i<n;i++) {
-        maxi+=arr[i];
-        if(maxi<0) {
-            maxi=0;
-        }
-        ans=max(ans,maxi);
-    }
-    cout<<ans<<endl;
-}
-int t() {
-    int arr[]={1,3,4};
-    int ans=INT_MIN;
-    for(int i=0;i<3;i++) {
-        int tempSum=arr[i];
-        for(int j=i+1;j<3;j++) {
-            tempSum+=arr[j];
-        }
-        ans=max(ans,tempSum);
-    }
-    cout<<ans<<endl;
-}
-
 /* Main()  function */
 int main()
 {

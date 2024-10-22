@@ -15,7 +15,7 @@ using namespace std;
 #define Graph unordered_map<int,vector<int>>
 
 /* FUNCTIONS */
-#define f(i,s,e) for(long long int i=s;i<e;i++)
+#define f(i,s,e) or(long long int i=s;i<e;i++)
 #define cf(i,s,e) for(long long int i=s;i<=e;i++)
 #define rf(i,e,s) for(long long int i=e-1;i>=s;i--)
 #define pb push_back
@@ -76,36 +76,30 @@ typedef unsigned long long int  uint64;
 void test_case()
 {
     // WRITE CODE HERE
-    
-
-
-}
-int maxSubArrSum(vector<int> &arr) {
-    int n= arr.size();
-    int maxi=INT_MIN;
-    int ans=INT_MIN;
+    int n;
+    cin>>n;
+    vi arr(n);
+    int odd=0;
+    int even=0;
     for(int i=0;i<n;i++) {
-        maxi+=arr[i];
-        if(maxi<0) {
-            maxi=0;
+        cin>>arr[i];
+        if(arr[i]%2==1) {
+            odd++;
         }
-        ans=max(ans,maxi);
-    }
-    cout<<ans<<endl;
-}
-int t() {
-    int arr[]={1,3,4};
-    int ans=INT_MIN;
-    for(int i=0;i<3;i++) {
-        int tempSum=arr[i];
-        for(int j=i+1;j<3;j++) {
-            tempSum+=arr[j];
+        else {
+            even++;
         }
-        ans=max(ans,tempSum);
     }
-    cout<<ans<<endl;
-}
+    if(odd==0) {
+        cout<<0<<endl;
+        return;
+    }
+    else {
+        cout<<(odd-1)/2+even+1<<endl;
+    }
 
+
+}
 /* Main()  function */
 int main()
 {

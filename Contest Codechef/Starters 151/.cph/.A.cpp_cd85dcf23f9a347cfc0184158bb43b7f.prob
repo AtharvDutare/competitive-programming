@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"/home/atharv/Documents/cp/Contest Codechef/Starters 151/A.cpp","tests":[{"id":1726065415084,"input":"3\n2 2 2\n5 40 38\n3 26 15\n","output":"0\n2\n-1\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/atharv/Documents/cp/Contest Codechef/Starters 151/A.cpp","group":"local","local":true}

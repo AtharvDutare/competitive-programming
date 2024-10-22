@@ -1,0 +1,1 @@
+{"name":"Local: B","url":"/home/atharv/Documents/cp/Contest Codeforces/Codeforces Round 979 (Div. 2) /B.cpp","tests":[{"id":1729347636448,"input":"3\n1\n2\n3\n","output":"0\n01\n010\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/atharv/Documents/cp/Contest Codeforces/Codeforces Round 979 (Div. 2) /B.cpp","group":"local","local":true}

@@ -15,7 +15,7 @@ using namespace std;
 #define Graph unordered_map<int,vector<int>>
 
 /* FUNCTIONS */
-#define f(i,s,e) for(long long int i=s;i<e;i++)
+#define f(i,s,e) or(long long int i=s;i<e;i++)
 #define cf(i,s,e) for(long long int i=s;i<=e;i++)
 #define rf(i,e,s) for(long long int i=e-1;i>=s;i--)
 #define pb push_back
@@ -76,36 +76,60 @@ typedef unsigned long long int  uint64;
 void test_case()
 {
     // WRITE CODE HERE
-    
-
-
-}
-int maxSubArrSum(vector<int> &arr) {
-    int n= arr.size();
-    int maxi=INT_MIN;
-    int ans=INT_MIN;
+    int n;
+    cin>>n;
+    vi a(n);
     for(int i=0;i<n;i++) {
-        maxi+=arr[i];
-        if(maxi<0) {
-            maxi=0;
-        }
-        ans=max(ans,maxi);
+        cin>>a[i];
     }
-    cout<<ans<<endl;
-}
-int t() {
-    int arr[]={1,3,4};
-    int ans=INT_MIN;
-    for(int i=0;i<3;i++) {
-        int tempSum=arr[i];
-        for(int j=i+1;j<3;j++) {
-            tempSum+=arr[j];
+    int ans=0;
+    // for(int i=1;i<=n;i++) {
+    //     for(int k=1;k<=n;k++) {
+    //         // for(int j=1;j<=n;j++) {
+    //         //     if(abs(arr[i-1]-arr[k-1])==abs(i-j)+abs(j-k)) {
+    //         //         ans++;
+    //         //     }
+    //         // }
+    //         int diff=abs(arr[i]-arr[k]);
+    //         if(i<=k) {
+    //             if((i+k-diff)/2<i) {
+    //                 ans++;
+    //             }
+    //             if(k-i==diff) {
+    //                 ans+=(abs(i-k));
+    //             }
+    //             if((diff+i+k)/2>=k) {
+    //                 ans++;
+    //             }
+    //         }
+    //         else {
+    //             if((i+k-diff)/2<i) {
+    //                 ans++;
+    //             }
+    //             if(i-k==diff) {
+    //                 ans+=(abs(i-k));
+    //             }
+    //             if((diff+i+k)/2>=k) {
+    //                 ans++;
+    //             }
+    //         }    
+    //     }
+    // }
+    for (int i = 0; i < n; i++) {
+            for (int k = max(0, i - 100); k <= min(n - 1, i + 100); k++) {
+                int diff = abs(a[i] - a[k]) - abs(i - k);
+                if (diff < 0 || diff % 2 == 1) continue;
+                if (diff == 0) {
+                    ans += abs(i - k) + 1;
+                    continue;
+                }
+                if (min(i, k) - diff / 2 >= 0) ans++;
+                if (max(i, k) + diff / 2 < n) ans++;
+            }
         }
-        ans=max(ans,tempSum);
-    }
     cout<<ans<<endl;
-}
 
+}
 /* Main()  function */
 int main()
 {

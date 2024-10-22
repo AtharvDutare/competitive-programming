@@ -76,36 +76,29 @@ typedef unsigned long long int  uint64;
 void test_case()
 {
     // WRITE CODE HERE
-    
-
-
-}
-int maxSubArrSum(vector<int> &arr) {
-    int n= arr.size();
-    int maxi=INT_MIN;
-    int ans=INT_MIN;
-    for(int i=0;i<n;i++) {
-        maxi+=arr[i];
-        if(maxi<0) {
-            maxi=0;
-        }
-        ans=max(ans,maxi);
+    int d,x,y;
+    cin>>d>>x>>y;
+    int ans=0;
+    float currPrice=x;
+    if(y>=x) {
+        cout<<ans<<endl;
+        return;
     }
-    cout<<ans<<endl;
-}
-int t() {
-    int arr[]={1,3,4};
-    int ans=INT_MIN;
-    for(int i=0;i<3;i++) {
-        int tempSum=arr[i];
-        for(int j=i+1;j<3;j++) {
-            tempSum+=arr[j];
+    else{
+        while(currPrice>y&&y>0&&currPrice>0) {
+            ans++;
+            y--;
+            currPrice=(100-ans*d)*x;
+            currPrice=((currPrice*1.0)/100.0);
         }
-        ans=max(ans,tempSum);
+        if(y>=currPrice&&y>0&&currPrice>0) {
+            cout<<ans<<endl;
+            return;
+        }
     }
-    cout<<ans<<endl;
-}
+    cout<<"-1"<<endl;
 
+}
 /* Main()  function */
 int main()
 {

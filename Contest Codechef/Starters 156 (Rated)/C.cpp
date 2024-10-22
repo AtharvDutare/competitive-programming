@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -15,7 +16,7 @@ using namespace std;
 #define Graph unordered_map<int,vector<int>>
 
 /* FUNCTIONS */
-#define f(i,s,e) for(long long int i=s;i<e;i++)
+#define f(i,s,e) or(long long int i=s;i<e;i++)
 #define cf(i,s,e) for(long long int i=s;i<=e;i++)
 #define rf(i,e,s) for(long long int i=e-1;i>=s;i--)
 #define pb push_back
@@ -76,36 +77,20 @@ typedef unsigned long long int  uint64;
 void test_case()
 {
     // WRITE CODE HERE
-    
-
-
-}
-int maxSubArrSum(vector<int> &arr) {
-    int n= arr.size();
-    int maxi=INT_MIN;
-    int ans=INT_MIN;
+    int n,k;
+    cin>>n>>k;
+    vll arr(n);
     for(int i=0;i<n;i++) {
-        maxi+=arr[i];
-        if(maxi<0) {
-            maxi=0;
-        }
-        ans=max(ans,maxi);
+        cin>>arr[i];
     }
-    cout<<ans<<endl;
-}
-int t() {
-    int arr[]={1,3,4};
-    int ans=INT_MIN;
-    for(int i=0;i<3;i++) {
-        int tempSum=arr[i];
-        for(int j=i+1;j<3;j++) {
-            tempSum+=arr[j];
-        }
-        ans=max(ans,tempSum);
-    }
-    cout<<ans<<endl;
-}
+    sort(arr.begin(),arr.end());
+    //cout<<arr[n-k]<<endl;
+    int t1=arr[n-1]+arr[n-2]+arr[n-k-1]+arr[0];
+    int t2=arr[n-1]+arr[n-k]+arr[n-k-1]+arr[0];
+    cout<<max(t1,t2)<<endl;
 
+
+}
 /* Main()  function */
 int main()
 {

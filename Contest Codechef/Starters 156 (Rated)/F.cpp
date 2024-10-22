@@ -15,7 +15,7 @@ using namespace std;
 #define Graph unordered_map<int,vector<int>>
 
 /* FUNCTIONS */
-#define f(i,s,e) for(long long int i=s;i<e;i++)
+#define f(i,s,e) or(long long int i=s;i<e;i++)
 #define cf(i,s,e) for(long long int i=s;i<=e;i++)
 #define rf(i,e,s) for(long long int i=e-1;i>=s;i--)
 #define pb push_back
@@ -76,36 +76,47 @@ typedef unsigned long long int  uint64;
 void test_case()
 {
     // WRITE CODE HERE
-    
+    int n,x;
+    cin>>n>>x;
+    vi arr(n);
+    for(int i=0;i<n;i++) cin>>arr[i];
 
-
-}
-int maxSubArrSum(vector<int> &arr) {
-    int n= arr.size();
-    int maxi=INT_MIN;
-    int ans=INT_MIN;
+    auto check=[&](int m) {
+        int last=arr[0]+m;
+        for(int i=1;i<n;i++) {
+            if(arr[i]-m>last+x) {
+                return false;
+            }
+            last=min(arr[i]+m,last+x);
+        }
+        return true;
+    };
+    int s=0;
+    int e=1e9;
+    int res=e;
+    while(s<=e) {
+        int m=(s+e)/2;
+        if(check(m)){
+            res=m;
+            e=m-1;
+        }
+        else {
+            s=m+1;
+        }
+    }
+    vector<int> result(n);
+    result[0]=arr[0]+res;
+    for(int i=1;i<n;i++) {
+        result[i]=min(arr[i]+res,result[i-1]+x);
+    }
+    cout<<res<<endl;
     for(int i=0;i<n;i++) {
-        maxi+=arr[i];
-        if(maxi<0) {
-            maxi=0;
-        }
-        ans=max(ans,maxi);
+        cout<<result[i]<<" ";
     }
-    cout<<ans<<endl;
-}
-int t() {
-    int arr[]={1,3,4};
-    int ans=INT_MIN;
-    for(int i=0;i<3;i++) {
-        int tempSum=arr[i];
-        for(int j=i+1;j<3;j++) {
-            tempSum+=arr[j];
-        }
-        ans=max(ans,tempSum);
-    }
-    cout<<ans<<endl;
-}
+    cout<<endl;
 
+
+}
 /* Main()  function */
 int main()
 {
